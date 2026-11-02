@@ -1,0 +1,287 @@
+body {
+       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 16px;
+        line-height: 1.6;
+        color: #2b2b2b;
+        background-color: rgb(246, 216, 182);
+       }
+       /* Styles for headings and paragraphs */
+h1 {
+        font-size: 2.5rem;
+        font-weight: 700;
+        line-height: 1.2;
+        letter-spacing: 0.5px;
+       }
+     /* Styles for headings and paragraphs */  
+h2 {
+        font-size: 2rem;
+        font-weight: 600;
+        line-height: 1.3;
+        letter-spacing: 0.5px;
+       }
+       h3 {
+        font-size: 1.5rem;
+        font-weight: 500;
+        line-height: 1.4;
+        letter-spacing: 0.5px;
+       }
+       p {
+        font-size: 1.2rem;
+        line-height: 1.6;
+        margin-bottom: 1rem;
+       }
+       header {
+
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        align-items: center;
+        padding: 20px 0;
+        background-color: #211b0e;
+        color: #ffffff;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+       }
+       nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 24px;
+        margin: 12px 0;
+       }
+       nav a {
+        text-decoration: none;
+        color: #8c00fe;
+        font-weight: 600;
+       }
+       main {
+        max-width: 1100px;
+        width: 100%;
+        margin: 0 auto;
+        padding: 20px;
+       }
+       footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
+        margin-top: 40px;
+       }
+       nav a:hover {
+        color: #ff6600;
+        background-color: beige;
+       }    
+       nav a:active {
+        background-color: beige;
+       }
+       nav a:focus {
+        outline: 2px solid #333333;
+        outline-offset: 2px;
+       }
+       img {
+        border-radius: 8px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+       }
+       a {
+        color: #333333;
+    
+       }
+       a:hover {
+        color: #000000;
+        text-decoration: underline;
+       }
+       /* Tablet */
+       @media (max-width: 768px) {
+              .container {
+            padding: 0 16px; }
+            .grid, .cards {
+            grid-template-columns: 1fr 1fr ; }
+        body {
+            font-size: 1rem;
+        }
+        h1 {
+            font-size: 1.8rem;        }
+       
+        }
+       /* Mobile */
+       @media (max-width: 480px) {
+        h1 {
+            font-size: 1.5rem;
+        }
+        h2 {
+            font-size: 1.25rem;
+        }
+       }
+     #menu-toggle {
+      display: none; 
+     }
+     @media (max-width: 768px) {
+       #menu-toggle {
+         display: block;
+       }
+     }
+       nav ul {
+        display: none; flex-direction: column;
+        nav ul.open {
+        display: flex;}
+       }
+       img {
+        max-width: 100%;
+        height: auto;
+       }
+       .modal {
+        position: fixed;
+        inset: 0;
+        background-color: rgba(0, 0, 0, .6);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+       }
+       .modal[hidden] {
+        display: none;
+       }
+       .modal-box {
+        background-color: #fff;
+        padding: 24px;
+        border-radius: 8px;
+        max-width: 400px;
+        width: 90%;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, .3);
+        animation: pop-in 0.3s ease;
+       }
+       @keyframes pop-in { from { transform: scale(0.8); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+
+       .filters { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 20px;  }
+       .filters input, .filters select { padding: 8px; font-size: 1rem; }
+       .cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 16px; }
+       .cards { background: #fff; padding: 16px; border-radius: 8px; box-shadow: 0 2px 6px rgba(0, 0, 0, .15); }
+
+       form { display: flex; flex-direction: column; gap: 6px; max-width: 500px; margin: 20px auto; }
+form input, form select, form textarea { padding: 10px; font-size: 1rem; border: 2px solid #ccc; border-radius: 6px; }
+form .invalid { border-color: #c0392b; }
+.error { color: #c0392b; font-size: .9rem; min-height: 1em; }
+form button, #send-email { padding: 12px; font-size: 1rem; cursor: pointer; border: 0; border-radius: 6px; }
+#enquiry-result, #email-preview { max-width: 500px; margin: 20px auto; padding: 16px; background: #fff; border-radius: 8px; }
+#preview-text { white-space: pre-wrap; }
+
+header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+header img {
+  max-width: 100%;
+  height: auto;
+}
+
+main {
+  max-width: 600px;
+  margin: 24px auto;
+  padding: 0 16px;
+}
+ /* ===== Animations ===== */
+
+/* Fade and slide up on page load */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+h1, h2 {
+  animation: fadeUp 0.8s ease-out both;
+}
+
+h2 { animation-delay: 0.2s; }
+
+
+/* Gentle pulse on the Book Now button */
+@keyframes pulse {
+  0%, 100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.5); }
+  50%      { transform: scale(1.06); box-shadow: 0 0 0 10px rgba(255, 255, 255, 0); }
+}
+
+#open-model {
+  animation: pulse 2s ease-in-out infinite;
+  cursor: pointer;
+}
+
+#open-model:hover {
+  animation-play-state: paused;
+  transform: scale(1.08);
+}
+
+/* Popup pops in when it is opened */
+@keyframes popIn {
+  from { opacity: 0; transform: scale(0.8); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+.modal-box {
+  animation: popIn 0.35s ease-out;
+}
+
+/* Smooth hover effect on the van images */
+body > img, center img {
+  transition: transform 0.3s ease;
+}
+
+body > img:hover {
+  transform: scale(1.03);
+}
+
+/* Respect people who turn animations off in their system settings */
+@media (prefers-reduced-motion: reduce) {
+  * { animation: none !important; transition: none !important; }
+}      
+/* ===== Pictures slide in ===== */
+
+/* Stops a sideways scrollbar while the pictures are off-screen */
+body {
+  overflow-x: hidden;
+}
+
+@keyframes slideFromLeft {
+  from { opacity: 0; transform: translateX(-100vw); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slideFromRight {
+  from { opacity: 0; transform: translateX(100vw); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+/* Logo (inside <center>) */
+center img {
+  animation: slideFromLeft 1.2s ease-out 0.3s backwards;
+}
+
+/* Van pictures: odd ones from the left, even ones from the right */
+body > img:nth-of-type(odd) {
+  animation: slideFromLeft 1.2s ease-out backwards;
+}
+body > img:nth-of-type(even) {
+  animation: slideFromRight 1.2s ease-out backwards;
+}
+
+/* Stagger so they arrive one after another */
+body > img:nth-of-type(1) { animation-delay: 0.8s; }
+body > img:nth-of-type(2) { animation-delay: 1.4s; }
+body > img:nth-of-type(3) { animation-delay: 2.0s; }
+body > img:nth-of-type(4) { animation-delay: 2.6s; }
+body > img:nth-of-type(5) { animation-delay: 3.2s; }
+
+   .faq { max-width: 700px; margin: 24px auto; padding: 0 16px; }
+   .faq summary { cursor: pointer; font-weight: bold; padding: 12px; }
+   .faq details { border: 1px solid #ccc; border-radius: 6px; margin-bottom: 8px; }
+   .faq details[open] summary { border-bottom: 1px solid #ccc; }
+   .faq details p { padding: 12px; margin: 0; animation: fadeUp 0.4s ease-out; }
+
+      .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; padding: 16px; }
+   .gallery img { width: 100%; height: auto; cursor: zoom-in; }
+   .lightbox { position: fixed; inset: 0; background: rgba(0,0,0,0.85); display: flex; align-items: center; justify-content: center; z-index: 1000; }
+   .lightbox[hidden] { display: none; }
+   .lightbox img { max-width: 90%; max-height: 90%; animation: popIn 0.3s ease-out; }
+   #lightbox-close { position: absolute; top: 16px; right: 24px; font-size: 2rem; background: none; border: 0; color: #fff; cursor: pointer; }
