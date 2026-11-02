@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact |JNR Transportation</title>
+  <meta name="description" content="JNR Transportation offers reliable, affordable shuttle and group transport. Get an instant quote online.">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="Javascript/main.js" defer></script>
+   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+    
+    
+</head>
+<body>
+    <header> 
+        <!-- Navigation links -->
+        <nav style="text-align:center;margin:12px 0;">
+        <a href="index.html">Home</a>
+        <a href="about.html">services</a>
+        <a href="services.html">about US</a>
+        <a href="enquiry.html">Enquire</a>
+        <a href="contact.html">Contact Us</a>
+        </nav>
+        </header>
+        <main> 
+               <h2>Where to find us</h2>
+   <div id="map" style="height:350px;" role="region" aria-label="Map of our location"></div>
+        <h2>Contact Us</h2>
+  <form id="contact-form" action="mailto:juniormatiwane8@gmail.com" method="post" enctype="text/plain" novalidate></form>
+  <label for="name">Full name</label>
+  <input type="text" id="name" name="name" required minlength="2" maxlength="50">
+  <span class="error" id="name-error"></span>
+
+  <label for="email">Email</label>
+  <input type="email" id="email" name="email" required>
+  <span class="error" id="email-error"></span>
+
+  <label for="phone">Phone number</label>
+  <input type="tel" id="phone" name="phone" placeholder="0821234567" required>
+  <span class="error" id="phone-error"></span>
+
+  <label for="type">Type of message</label>
+  <select id="type" name="type" required>
+    <option value="">Select a type</option>
+    <option value="General question">General question</option>
+    <option value="Feedback">Feedback</option>
+    <option value="Complaint">Complaint</option>
+    <option value="Partnership">Partnership</option>
+  </select>
+  <span class="error" id="type-error"></span>
+
+  <label for="message">Message</label>
+  <textarea id="message" name="message" minlength="10" maxlength="500" rows="6" required></textarea>
+  <small><span id="char-count">0</span>/500</small>
+  <span class="error" id="message-error"></span>
+
+  <button type="submit">Preview email</button>
+</form>
+
+<div id="email-preview" hidden>
+  <h3>Your email</h3>
+  <pre id="preview-text"></pre>
+  <button id="send-email" type="button">Send email</button>
+</div>
+</main>
+   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+   <script src="Javascript/map.js" defer></script>
+<script src="Javascript/forms.js" defer></script>
+        <!--linking the css file to the html page-->
+        <link rel="stylesheet" href="css/style.css">
+        <h1 style="text-align:center;"> JNR Transportation</h1>
+        <!--heading of the webpage-->
+        <ul><h2 style="text-align:center;">Your Reliable Shuttle Service</h2></ul>
+        <h1 style="text-align:center;"> Follow us on Social Media</h1>
+       <!--image of the company-->
+        <center><img src="images/Logo.png" alt="JNR Transportation" loading="lazy" style="max-width:100%;height:auto;"></center>
+         <h1 style="text-align:center;">Call or WhatsApp us on <a href="tel:0763923556">076 392 3556</a></h1>
+         <img src="images/rear view.png" alt="JNR Transportation" loading="lazy" style="max-width:20cm;height:10cm;">
+         <img src="images/side.png" alt="JNR Transportation" loading="lazy" style="max-width:20cm;height:10cm;">
+         <img src="images/wash view.png" alt="JNR Transportation" loading="lazy" style="max-width:20cm;height:10cm;">
+     
+<footer>
+   
+<!--footer of the webpage-->
+    <img src="images/instagram.jpg" alt="JNR Transportation" style="max-width:3cm;height:5cm;">
+    <a href="https://www.instagram.com/jnr_shuttle_?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">Follow us on Instagram</a>
+
+    <img src="images/Tik Tok.jpg" alt="JNR Transportation" style="max-width:3cm;height:5cm;">
+    <a href="https://www.tiktok.com/@jnr_shuttle" target="_blank">Follow us on TikTok</a>
+     <center><p>&copy; 2019 JNR Transportation. All rights reserved.</p></center>
+    </footer>
+</body>
+</html>

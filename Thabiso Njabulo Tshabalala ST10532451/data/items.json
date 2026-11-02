@@ -1,0 +1,5 @@
+[
+  { "id": 1, "name": "Local trips", "category": "Local trips", "price": 80, "description": "In and around ..." },
+  { "id": 2, "name": "Provincial trips", "category": "Provincial trips", "price": 150, "description": "Within ..." },
+  { "id": 3, "name": "Around the province", "category": "Around the province", "price": 100, "description": "..." }
+]
